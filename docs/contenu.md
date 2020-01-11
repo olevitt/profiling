@@ -1,6 +1,6 @@
 <!-- .slide: class="slide" -->
 
-# Le scénario
+# Le crime
 
 ![](images/bug-report.png)
 
@@ -24,10 +24,12 @@
 
 --
 
-## Retour aux sources
+## 2020 : Retour aux sources
 
 ![](images/experts.jpg)
 
 ---
 
-# Notre enquête
+# Menons l'enquête
+
+On commence par quoi ?
