@@ -2,15 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
 
     <title>Profiling en Java</title>
 
     <link rel="stylesheet" href="css/reveal.css" />
-    <link rel="stylesheet" href="css/theme/moon.css" />
+    <link rel="stylesheet" href="css/theme/beige.css" />
     <link
       href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
       rel="stylesheet"
@@ -39,7 +35,16 @@
       <div class="slides">
         <section class="main-title">
           <h1>Les experts JVM saison 1 : profiling</h1>
-          <h3>Olivier Levitt, Insee</h3>
+          <h2>
+            Olivier Levitt (olivier.levitt@gmail.com),
+            <a href="https://insee.fr">Insee</a>
+          </h2>
+          <h3>
+            Code / slides :
+            <a href="https://github.com/olevitt/profiling"
+              >https://github.com/olevitt/profiling</a
+            >
+          </h3>
         </section>
 
         <section
@@ -59,7 +64,7 @@
       Reveal.initialize({
         height: "100%",
         width: "100%",
-        margin: 0.2,
+        margin: 0,
         dependencies: [
           { src: "plugin/math/math.js", async: true },
           { src: "plugin/markdown/marked.js" },
