@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div class="card card-body alert-primary">
+      <h2>Calculer SHA-256</h2>
+      <input type="file" id="input" onchange="handleFile(this.files)" />
+      <span id="calculatedHash"></span>
+    </div>
+    <div class="card card-body alert-secondary">
+      <h2>Trouver block</h2>
+      <input type="text" id="toHash" />
+      <button onclick="gomine(document.getElementById('toHash').value)">
+        Go
+      </button>
+      <span id="block"></span>
+    </div>
+    <div class="card card-body alert-info">
+      <h2>Reverse SHA-256</h2>
+      <input type="text" id="toReverse" />
+      <button onclick="reverse(document.getElementById('toReverse').value)">
+        Reverse
+      </button>
+      <span id="reversed"></span>
+    </div>
+  </body>
+</html>

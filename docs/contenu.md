@@ -8,28 +8,30 @@
 
 --
 
-## Policier des années 2000
-
 ![](images/poireau.png)
 
-<!-- .element: class="fragment" -->
-
 --
-
-## Policier des années 2010
 
 ![](images/cherlock.png)
 
-<!-- .element: class="fragment" -->
-
 --
 
-## 2020 : Retour aux sources
+## Retour aux sources
 
 ![](images/experts.jpg)
 
 ---
 
-# Menons l'enquête
+# On commence par quoi ?
 
-On commence par quoi ?
+## Aller sur la scène de crime
+
+ou
+
+## Interroger les suspects
+
+---
+
+# L'enquête continue !
+
+https://github.com/olevitt/profiling

@@ -6,12 +6,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class Hasher {
-
-    public String calculateHash(String dataToHash) {
-        return applySha256(
-        		dataToHash
-        );
-    }
     
   //Applies Sha256 to a string and returns the result.
     public static String applySha256(String input){
