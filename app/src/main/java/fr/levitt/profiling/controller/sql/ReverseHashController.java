@@ -20,14 +20,10 @@ public class ReverseHashController {
 
 	@GetMapping
 	public ReverseResult reverse(@RequestParam("data") String hash) {
-		System.out.println("Recherche dans une base de "+reverseHashRepository.count()+ " éléments");
 		ReverseResult result = new ReverseResult();
 		result.setHash(hash);
 		List<ReverseHash> foundHashs = reverseHashRepository.findByHash(hash);
 		if (foundHashs.size() > 0) {
-			for (ReverseHash reverseHash : foundHashs) {
-				System.out.println(reverseHash.getSource());
-			}
 			result.setSource(foundHashs.get(0).getSource());
 		}
 		else {
