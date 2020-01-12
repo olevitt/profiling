@@ -20,6 +20,9 @@ public class ReverseHashController {
 
 	@GetMapping
 	public ReverseResult reverse(@RequestParam("data") String hash) {
+		if (hash == null || hash.length() != 64) {
+			throw new IllegalArgumentException("Invalid hash");
+		}
 		ReverseResult result = new ReverseResult();
 		result.setHash(hash);
 		List<ReverseHash> foundHashs = reverseHashRepository.findByHash(hash);

@@ -2,6 +2,10 @@ handleFile = files => {
   fileUpload(files[0]);
 };
 
+erreur = () => {
+  fetch("http://localhost:8080/oopsy");
+};
+
 reverse = data => {
   document.getElementById("reversed").innerHTML = "";
   fetch("http://localhost:8080/sql?data=" + data)
