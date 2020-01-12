@@ -8,15 +8,20 @@ Comme toute bonne police scientifique, nous aurons de bons outils : JVisualVM, G
 
 ## Principe
 
-Le dossier `app` contient une application web classique et basique, volontairement non optimisée.  
+Le dossier `app` contient un serveur web classique et basique, volontairement non optimisée.  
 C'est un bon prétexte pour y tester différents outils de profiling.  
-Le lancement de l'application nécessite maven :
+L'application utilise `spring-boot` et peut donc être lancée directement via maven :
 
 ```
 mvn spring-boot:run
 ```
 
-## Contenu de la malette
+L'application écoute sur le port `8080`.  
+Pour tester les 3 endpoints, on peut utiliser la page `index.html` du dossier `front`.
+
+Arriverez vous à comprendre tout ce qui se passe dans l'application **sans lire le code** ?
+
+## Outils utilisés
 
 ### VisualVM
 
