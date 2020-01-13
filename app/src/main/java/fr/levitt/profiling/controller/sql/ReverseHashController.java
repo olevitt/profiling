@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import fr.levitt.profiling.data.ReverseHash;
 import fr.levitt.profiling.data.ReverseHashRepository;
+import fr.levitt.profiling.service.Hasher;
 
 @RestController
 @RequestMapping("/sql")
@@ -23,8 +24,18 @@ public class ReverseHashController {
 		if (hash == null || hash.length() != 64) {
 			throw new IllegalArgumentException("Invalid hash");
 		}
+		
 		ReverseResult result = new ReverseResult();
 		result.setHash(hash);
+		
+		for (int i = 0; i < 1000*1000; i++) {
+			String sourceToTest = generateRandomInput();
+			if (Hasher.applySha256(sourceToTest) != null && Hasher.applySha256(sourceToTest).equals(hash)) {
+				result.setSource(sourceToTest);
+				return result;
+			}
+		}
+			
 		List<ReverseHash> foundHashs = reverseHashRepository.findByHash(hash);
 		if (foundHashs.size() > 0) {
 			result.setSource(foundHashs.get(0).getSource());
@@ -33,6 +44,10 @@ public class ReverseHashController {
 			result.setSource("Not found");
 		}
 		return result;
+	}
+	
+	private String generateRandomInput() {
+		return "";
 	}
 	
 	public static class ReverseResult {

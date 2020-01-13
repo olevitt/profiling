@@ -10,6 +10,15 @@
     <script src="index.js"></script>
   </head>
   <body>
+    <div class="card card-body alert-info">
+      <h2>Reverse SHA-256</h2>
+      <input type="text" id="toReverse" />
+      <button onclick="reverse(document.getElementById('toReverse').value)">
+        Reverse
+      </button>
+      <span id="reversed"></span>
+    </div>
+    <hr class="alert-danger" />
     <div class="card card-body alert-primary">
       <h2>Calculer SHA-256</h2>
       <input type="file" id="input" onchange="handleFile(this.files)" />
@@ -21,15 +30,8 @@
       <button onclick="gomine(document.getElementById('toHash').value)">
         Go
       </button>
+
       <span id="block"></span>
-    </div>
-    <div class="card card-body alert-info">
-      <h2>Reverse SHA-256</h2>
-      <input type="text" id="toReverse" />
-      <button onclick="reverse(document.getElementById('toReverse').value)">
-        Reverse
-      </button>
-      <span id="reversed"></span>
     </div>
     <span style="color:white"
       >a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3</span
