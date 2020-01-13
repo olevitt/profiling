@@ -4,7 +4,7 @@ Slides : https://olevitt.github.io/profiling
 
 Un crime a eu lieu en prod !
 Sur la scène de crime, un message ensanglanté : "java.lang.OutOfMemoryError: Java heap space". Ensemble, nous allons mener l'enquête et ausculter une application Java sous différents angles : CPU, mémoire, threads, requêtes SQL…
-Comme toute bonne police scientifique, nous aurons de bons outils : JVisualVM, Glowroot et Arthas.
+Comme toute bonne police scientifique, nous aurons de bons outils : VisualVM, Glowroot et Arthas.
 
 ## Principe
 

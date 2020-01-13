@@ -1,3 +1,13 @@
+# Les experts JVM saison 1 : profiling
+
+## Olivier Levitt (olivier.levitt@gmail.com), [Insee](https://insee.fr)
+
+## [@LevittOlivier](https://twitter.com/LevittOlivier)
+
+### Code / slides : [https://github.com/olevitt/profiling](https://github.com/olevitt/profiling)
+
+--
+
 <!-- .slide: class="slide" -->
 
 # Le crime
@@ -20,7 +30,7 @@
 
 ![](images/experts.jpg)
 
----
+--
 
 # On commence par quoi ?
 
@@ -70,7 +80,7 @@ https://github.com/alibaba/arthas
 
 => Local, dev, (prod)
 
----
+--
 
 # L'enquête continue !
 
