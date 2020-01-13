@@ -20,11 +20,10 @@ public class BitcoinController {
 			String dataToHash = 
 					data + ":" +
                     String.valueOf(nonce);
-			String newHash = Hasher.applySha256(dataToHash);
-			if (newHash.substring(0, difficulty.length()).equals(difficulty)) {
+			if (Hasher.applySha256(dataToHash) != null && Hasher.applySha256(dataToHash).substring(0, difficulty.length()).equals(difficulty)) {
 				Result result = new Result();
 				result.setData(dataToHash);
-				result.setHash(newHash);
+				result.setHash(Hasher.applySha256(dataToHash));
 				return result;
 			}
 			nonce++;
