@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import fr.levitt.profiling.service.Hasher;
 
 @RestController
-@RequestMapping("/memory")
+@RequestMapping("/hash")
 public class LeakController {
 
 	private List<String> REQUESTS_LOG = new ArrayList<String>();

@@ -2,13 +2,9 @@ handleFile = files => {
   fileUpload(files[0]);
 };
 
-erreur = () => {
-  fetch("http://localhost:8080/oopsy");
-};
-
 reverse = data => {
   document.getElementById("reversed").innerHTML = "";
-  fetch("http://localhost:8080/sql?data=" + data)
+  fetch("http://localhost:8080/reverse?data=" + data)
     .then(resp => resp.json())
     .then(
       json =>
@@ -20,7 +16,7 @@ reverse = data => {
 
 gomine = dataToHash => {
   document.getElementById("block").innerHTML = "";
-  fetch("http://localhost:8080/cpu", {
+  fetch("http://localhost:8080/bitcoin", {
     method: "POST",
     body: dataToHash
   })
@@ -35,7 +31,7 @@ gomine = dataToHash => {
 
 fileUpload = file => {
   document.getElementById("calculatedHash").innerHTML = "";
-  fetch("http://localhost:8080/memory", {
+  fetch("http://localhost:8080/hash", {
     method: "POST",
     body: file
   })

@@ -11,10 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import fr.levitt.profiling.data.ReverseHash;
 import fr.levitt.profiling.data.ReverseHashRepository;
+import fr.levitt.profiling.service.Bruteforce;
 import fr.levitt.profiling.service.Hasher;
 
 @RestController
-@RequestMapping("/sql")
+@RequestMapping("/reverse")
 public class ReverseHashController {
 
 	@Autowired
@@ -29,12 +30,11 @@ public class ReverseHashController {
 		ReverseResult result = new ReverseResult();
 		result.setHash(hash);
 
-		for (int i = 0; i < 1000*1000; i++) {
-			String sourceToTest = generateRandomInput();
-			if (Hasher.applySha256(sourceToTest) != null && Hasher.applySha256(sourceToTest).equals(hash)) {
-				result.setSource(sourceToTest);
-				return result;
-			}
+		String bruteforcedSource = Bruteforce.testRandomHashes(hash);
+		
+		if (bruteforcedSource != null) {
+			result.setSource(bruteforcedSource);
+			return result;
 		}
 
 		List<ReverseHash> foundHashs = reverseHashRepository.findByHash(hash);
@@ -47,19 +47,7 @@ public class ReverseHashController {
 		return result;
 	}
 
-	private String generateRandomInput() {
-		int leftLimit = 97; // letter 'a'
-		int rightLimit = 122; // letter 'z'
-		int targetStringLength = 10;
-		Random random = new Random();
-
-		String generatedString = random.ints(leftLimit, rightLimit + 1)
-				.limit(targetStringLength)
-				.collect(StringBuilder::new, StringBuilder::appendCodePoint, StringBuilder::append)
-				.toString();
-
-		return generatedString;
-	}
+	
 
 	public static class ReverseResult {
 

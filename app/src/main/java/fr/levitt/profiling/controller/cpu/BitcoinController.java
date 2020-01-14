@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import fr.levitt.profiling.service.Hasher;
 
 @RestController
-@RequestMapping("/cpu")
+@RequestMapping("/bitcoin")
 public class BitcoinController {
 	
 	@PostMapping
