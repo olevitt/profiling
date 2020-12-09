@@ -17,7 +17,7 @@ mvn spring-boot:run
 ```
 
 L'application écoute sur le port `8080`.  
-Pour tester les 3 endpoints, on peut utiliser la page `index.html` du dossier `front`.
+Les endpoints sont testables directement ou via une UI simple accessible sur `http://localhost:8080/`
 
 Arriverez vous à comprendre tout ce qui se passe dans l'application **sans lire le code** ?
 

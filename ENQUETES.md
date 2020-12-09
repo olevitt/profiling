@@ -66,6 +66,6 @@ Ca a l'air de bien marcher, non ?
 <details>
   <summary>Indice 2</summary>
   
-  Attention, j'ai l'impression de voir double
+  J'ai l'impression de voir double, pas vous ?
 
 </details>
