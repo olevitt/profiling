@@ -21,6 +21,10 @@ Pour tester les 3 endpoints, on peut utiliser la page `index.html` du dossier `f
 
 Arriverez vous à comprendre tout ce qui se passe dans l'application **sans lire le code** ?
 
+## Les enquêtes
+
+Les enquêtes sont présentées dans le fichier [ENQUETES.md](ENQUETES.md)
+
 ## Outils utilisés
 
 ### VisualVM
